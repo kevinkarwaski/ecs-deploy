@@ -36,8 +36,8 @@ TIMEOUT=90
 VERBOSE=false
 
 # AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY can be set as environment variables 
-if [ -z ${AWS_ACCESS_KEY_ID+x} ]; then AWS_ACCESS_KEY_ID=false; fi
-if [ -z ${AWS_SECRET_ACCESS_KEY+x} ]; then AWS_SECRET_ACCESS_KEY=false; fi
+#if [ -z ${AWS_ACCESS_KEY_ID+x} ]; then AWS_ACCESS_KEY_ID=false; fi
+#if [ -z ${AWS_SECRET_ACCESS_KEY+x} ]; then AWS_SECRET_ACCESS_KEY=false; fi
 
 # Loop through arguments, two at a time for key and value
 while [[ $# > 0 ]]
@@ -45,14 +45,14 @@ do
     key="$1"
 
     case $key in
-        -k|--aws-access-key)
-            AWS_ACCESS_KEY_ID="$2"
-            shift # past argument
-            ;;
-        -s|--aws-secret-key)
-            AWS_SECRET_ACCESS_KEY="$2"
-            shift # past argument
-            ;;
+#        -k|--aws-access-key)
+#            AWS_ACCESS_KEY_ID="$2"
+#            shift # past argument
+#            ;;
+#        -s|--aws-secret-key)
+#            AWS_SECRET_ACCESS_KEY="$2"
+#            shift # past argument
+#            ;;
         -c|--cluster)
             CLUSTER="$2"
             shift # past argument
@@ -85,14 +85,14 @@ if [ $VERBOSE == true ]; then
 fi
 
 # Make sure we have all the variables needed: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, CLUSTER, SERVICE, IMAGE
-if [ $AWS_ACCESS_KEY_ID == false ]; then 
-    echo "AWS_ACCESS_KEY_ID is required. You can set it as an environment variable or pass the value using -k or --aws-access-key"
-    exit 1
-fi
-if [ $AWS_SECRET_ACCESS_KEY == false ]; then 
-    echo "AWS_SECRET_ACCESS_KEY is required. You can set it as an environment variable or pass the value using -s or --aws-secret-key"
-    exit 1
-fi
+#if [ $AWS_ACCESS_KEY_ID == false ]; then 
+#    echo "AWS_ACCESS_KEY_ID is required. You can set it as an environment variable or pass the value using -k or --aws-access-key"
+#    exit 1
+#fi
+#if [ $AWS_SECRET_ACCESS_KEY == false ]; then 
+#    echo "AWS_SECRET_ACCESS_KEY is required. You can set it as an environment variable or pass the value using -s or --aws-secret-key"
+#    exit 1
+#fi
 if [ $CLUSTER == false ]; then 
     echo "CLUSTER is required. You can pass the value using -c or --cluster"
     exit 1
