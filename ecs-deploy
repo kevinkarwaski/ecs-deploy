@@ -136,10 +136,10 @@ fi
 #    echo "AWS_SECRET_ACCESS_KEY is required. You can set it as an environment variable or pass the value using -s or --aws-secret-key"
 #    exit 1
 #fi
-if [ -z $AWS_DEFAULT_REGION ] && [ -z $AWS_PROFILE ]; then
-    echo "AWS_DEFAULT_REGION is required. You can set it as an environment variable or pass the value using -r or --region"
-    exit 1
-fi
+#if [ -z $AWS_DEFAULT_REGION ] && [ -z $AWS_PROFILE ]; then
+#    echo "AWS_DEFAULT_REGION is required. You can set it as an environment variable or pass the value using -r or --region"
+#    exit 1
+#fi
 if [ $CLUSTER == false ]; then
     echo "CLUSTER is required. You can pass the value using -c or --cluster"
     exit 1
