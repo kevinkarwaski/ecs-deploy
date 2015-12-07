@@ -128,14 +128,14 @@ if [ $VERBOSE == true ]; then
 fi
 
 # Make sure we have all the variables needed: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, CLUSTER, SERVICE, IMAGE
-if [ -z $AWS_ACCESS_KEY_ID ] && [ -z $AWS_PROFILE ]; then
-    echo "AWS_ACCESS_KEY_ID is required. You can set it as an environment variable or pass the value using -k or --aws-access-key"
-    exit 1
-fi
-if [ -z $AWS_SECRET_ACCESS_KEY ] && [ -z $AWS_PROFILE ]; then
-    echo "AWS_SECRET_ACCESS_KEY is required. You can set it as an environment variable or pass the value using -s or --aws-secret-key"
-    exit 1
-fi
+#if [ -z $AWS_ACCESS_KEY_ID ] && [ -z $AWS_PROFILE ]; then
+#    echo "AWS_ACCESS_KEY_ID is required. You can set it as an environment variable or pass the value using -k or --aws-access-key"
+#    exit 1
+#fi
+#if [ -z $AWS_SECRET_ACCESS_KEY ] && [ -z $AWS_PROFILE ]; then
+#    echo "AWS_SECRET_ACCESS_KEY is required. You can set it as an environment variable or pass the value using -s or --aws-secret-key"
+#    exit 1
+#fi
 if [ -z $AWS_DEFAULT_REGION ] && [ -z $AWS_PROFILE ]; then
     echo "AWS_DEFAULT_REGION is required. You can set it as an environment variable or pass the value using -r or --region"
     exit 1
